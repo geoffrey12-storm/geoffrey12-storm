@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secret Cafe</title>
+	<link rel="stylesheet" type="text/css" href="testjava.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="sticky">
+		<nav>
+			<div class="bars">
+				<i class="fa fa-bars"></i>
+			</div>
+			<a class="logo" href="testwtjava.html"><img border="0" alt="secret cafe" src="logo.jpg" width="70" height="68"></a>
+			<ul>
+				<li><a class="active" href="testwtjava.html">HOME</a></li>
+				<li><a href="about1.html">ABOUT</a></li>
+				<li><a href="#">MENU <i class="fa fa-caret-down"></i></a>
+					<ul>
+						<li><a href="#">HOT COFFEES</a></li>
+						<li><a href="#">COLD COFFEES</a></li>
+						<li><a href="#">ALL DISHES</a></li>
+					</ul>
+				</li>
+				<li><a href="#">CONTACTS</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<div class="content">
+		
+		
+		<div class="cont1">
+			<div class="slideshow">
+				<i class="fa fa-arrow-right" id="nextBtn"></i>
+				<i class="fa fa-arrow-left" id="prevBtn"></i>
+		
+			<div class="slider">
+				<img src="kape.jpg" id="last" alt="Coffee4">
+				<img src="kape3.jpg" alt="Coffee1">
+				<img src="kape1.jpg" alt="Coffee2">
+				<img src="kape2.jpg" alt="Coffee3">
+				<img src="kape.jpg" alt="Coffee4">
+				<img src="kape3.jpg" id="first" alt="Coffee1">
+			</div>
+				<div class="center">SECRET CAFÉ</div>
+			</div>
+			<br>
+			<a href="Video.html">WATCH VIDEO</a>
+			<a href="#">LEARN MORE</a>
+		
+		<script>
+			const carouselSlide = document.querySelector('.slider');
+			const carouselImages = document.querySelectorAll('.slider img');	
+			const prevBtn = document.querySelector('#prevBtn');
+			const nextBtn = document.querySelector('#nextBtn');	
+
+			let counter = 1;
+			const size = carouselImages[0].clientWidth;
+		
+			carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+		
+			nextBtn.addEventListener('click', () => {
+				if (counter >= carouselImages.length -1) return;
+				carouselSlide.style.transition = "transform 0.4s ease-in-out";
+				counter++;
+				carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+			});
+		
+		
+			prevBtn.addEventListener('click', () => {
+				if (counter <= 0) return;
+				carouselSlide.style.transition = "transform 0.4s ease-in-out";
+				counter--;
+				carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+			});
+		
+		
+			carouselSlide.addEventListener('transitionend', () => {
+				if (carouselImages[counter].id === 'last'){
+				carouselSlide.style.transition = "none";
+				counter = carouselImages.length -2 ; 
+				carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';	
+				}
+		
+				if (carouselImages[counter].id === 'first'){
+				carouselSlide.style.transition = "none";
+				counter = carouselImages.length - counter; 
+				carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+				}
+			});
+</script>
+	
+	
+	
+			<p class="aftervid">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+			<p class="aftervid">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+		</div>
+	</div>
+	<footer class="footer">
+	<p>Secret Café PH | 2020</p>
+	<p>Contact Information: 09208779944 <a href="#">Hello There Nigga-san</a></p>
+	</footer>
+</body>
+
+</html>

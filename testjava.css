@@ -1,0 +1,351 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)),url("kohi.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+.sticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+.logo{
+	float: right;
+	margin: 0;
+	padding: 0 20px;
+}
+.bars{
+	float: left;
+	padding: 24px;
+	margin: 0 auto;
+	cursor: pointer;
+	color: white;
+	display: none;
+}
+.bars:hover{
+	color: black;
+	background-color: white;
+	transition: 1s;
+}
+nav{
+	height: 68px;
+	width: 100%;
+	background-color: rgba(50,51,52,0.8);
+	margin-bottom: 20px;
+}
+
+nav ul{
+	float: left;
+}
+
+nav ul li{
+	float: left;
+	list-style-type: none;
+	position: relative;
+}
+
+nav ul li a{
+	font-weight: bold;
+	text-decoration: none;
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 11px;
+	display: block;
+	padding: 27px 30px;
+	color: white;
+}
+
+nav ul li ul{
+	display: none;
+	position: absolute;
+	background-color: rgba(73,73,73);
+	text-align: center;
+	padding: 0;
+	border-radius: 0px 0px 10px 10px;
+}
+
+nav ul li:hover ul{
+	display: block;
+}
+
+nav ul li ul li {
+	width: 190px;
+	
+}
+
+nav ul li ul li a{
+	padding: 10px 14px;
+	
+}
+
+nav ul li ul li a:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+}
+
+nav ul li a:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+}
+
+.active{
+	background-color: black;
+}
+
+.content{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	margin-bottom: 20px;
+}
+
+.cont1{
+	overflow: auto;
+	
+	float: none;
+	border-radius: 0px 0px 20px 20px;
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+	height: auto;
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	padding-bottom: 20px;
+}
+
+
+.samplevid{
+	padding: 0;
+	margin: 0 auto;
+}
+
+.cont1 a{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	display: inline-block;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.cont1 a:hover{
+	color: black;
+	background-color: white;
+	transition: 1s;
+}
+
+.aftervid{
+	color: white;
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.footer{
+	background-color: rgba(50,51,52,0.8);
+	position: relative;
+	height: 90px;
+	text-align: center;
+	margin-top: -100px;
+	clear: both;
+}
+
+.footer p{
+	padding-top: 20px;
+	color: white;
+	font-size: 15px;
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+.footer a:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+	border-radius: 5px 5px 5px 5px;
+}
+
+/* ABOUT */
+.content1{
+	overflow-x: auto;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	margin-bottom: 20px;
+}
+
+.cont2{
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: rgba(249,249,249);
+	font-size: 24px;
+	padding: 25px;
+	height: auto;
+	box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.9);
+	border-radius: 40px 10px 40px 10px;
+}
+
+.cont2 p{
+	margin: 30px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 20px;
+}
+
+.paralax{
+	background: url("caffeine.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0 auto;
+	width: 70%;
+	height: 500px;
+}
+
+.paralax2{
+	background: url("kohi.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0 auto;
+	width: 70%;
+	height: 500px;
+}
+
+
+.slideshow{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	margin-top: -105px;
+	margin-bottom: 5px;
+}
+
+.slider {
+	margin-top: 200px;
+	display: flex;
+	width: 100%;
+	height: 500px;
+}
+
+.slider img{
+	width: 100%;
+}
+
+#prevBtn{
+	position: absolute;
+	background-color: rgba(65,65,65,0.5);
+	border-radius: 50%;
+	padding: 20px;
+	top: 60%;
+	z-index: 10;
+	left: 5%;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+}
+#nextBtn{
+	position: absolute;
+	background-color: rgba(65,65,65,0.5);
+	border-radius: 50%;
+	padding: 20px;
+	top: 60%;
+	z-index: 10;
+	right: 5%;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+}
+
+#nextBtn:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+}
+
+#prevBtn:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+}
+
+.center{
+	position: absolute;
+	color: white;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: century Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+	.bars{
+		float: right;
+		display: block;
+	}
+	.logo{
+		display: none;
+	}
+}
